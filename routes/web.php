@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::namespace('Dash')->group(function(){
     Route::prefix('dashboard')->group(function (){
         Route::get('/','DashController@index')->name('dash.home');
@@ -22,4 +23,8 @@ Route::namespace('Dash')->group(function(){
 });
 
 Auth::routes();
+=======
+Auth::routes();
+
+>>>>>>> 46489b6f46ac8883a63e41cf5814efd9760109ab
 Route::get('/home', 'HomeController@index')->name('home');
