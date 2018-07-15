@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::namespace('Dash')->group(function(){
+    Route::prefix('dashboard')->group(function (){
+        Route::get('/','DashController@index')->name('dash.home');
+    });
+});
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
